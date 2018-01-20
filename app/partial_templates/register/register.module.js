@@ -1,7 +1,7 @@
 'use strict';
 
 // Define the `phoneDetail` module
-angular.module('register', ['ui-notification', 'ngCookies']).
+angular.module('register', ['ui-notification', 'ngCookies','picardy.fontawesome']).
   config(function(NotificationProvider) {
     NotificationProvider.setOptions({
       delay: 10000,
@@ -12,4 +12,22 @@ angular.module('register', ['ui-notification', 'ngCookies']).
       positionX: 'right',
       positionY: 'top'
   });
-});
+})
+.directive("compareTo", function() {
+  return {
+    require: "ngModel",
+    scope: {
+      otherModelValue: "=compareTo"
+    },
+    link: function(scope, element, attributes, ngModel) {
+
+      ngModel.$validators.compareTo = function(modelValue) {
+        return modelValue == scope.otherModelValue;
+      };
+
+      scope.$watch("otherModelValue", function() {
+        ngModel.$validate();
+      });
+    }
+  };
+})

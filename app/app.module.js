@@ -1,14 +1,16 @@
 'use strict';
 
-// Define the `phonecatApp` module
-angular.module('phonecatApp', [
+angular.module('adictiz', [
   'ngRoute',
   'ngCookies',
+  'picardy.fontawesome',
   'core',
 
   'appHeader',
   'aboutMe',
   'register',
   'phoneDetail',
-  'phoneList'
+  'phoneList',
+
+  'pagePrincipale'
 ]);

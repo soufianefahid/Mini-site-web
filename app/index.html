@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<html lang="en" ng-app="adictiz">
   <head>
     <meta charset="utf-8">
     <title>Adictiz Test</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/angular-ui-notification/dist/angular-ui-notification.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="app.css" />
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -19,10 +20,12 @@
     <script src="bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-fontawesome/dist/angular-fontawesome.js"></script>
     <script src="bower_components/angular-ui-notification/dist/angular-ui-notification.min.js"></script>
 
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
+    <script src="app.directive.js"></script>
     <script src="core/phone/phone.module.js"></script>
     <script src="core/phone/phone.service.js"></script>
     <script src="core/ui-dialog/ui-dialog.module.js"></script>
@@ -40,6 +43,9 @@
     <script src="partial_templates/app-header/app-header.component.js"></script>
     <script src="partial_templates/about-me/about-me.module.js"></script>
     <script src="partial_templates/about-me/about-me.component.js"></script>
+
+    <script src="pages/page-principale/page-principale.module.js"></script>
+    <script src="pages/page-principale/page-principale.component.js"></script>
   </head>
   <body>
     <app-header></app-header>

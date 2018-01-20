@@ -16,64 +16,99 @@ h1 {
   height: 115px;
   padding-top: 15px;
 }
-
-.thumb {
-  float: left;
-  height: 100px;
-  margin: -0.5em 1em 1.5em 0;
-  padding-bottom: 1em;
-  width: 100px;
+.app-tabs-container {
+  padding: 50px;
 }
-
-/* View: Phone detail */
-.phone {
-  background-color: white;
-  border: 1px solid black;
-  float: left;
-  height: 400px;
-  margin-bottom: 2em;
-  margin-right: 3em;
-  padding: 2em;
-  width: 400px;
+.tabs-header-container {
+  height: 50px;
+  position: relative;
 }
-
-.phone-thumbs {
-  list-style: none;
-  margin: 0;
-}
-
-.phone-thumbs img {
-  height: 100px;
-  padding: 1em;
-  width: 100px;
-}
-
-.phone-thumbs li {
-  background-color: white;
-  border: 1px solid black;
+.tabs-header-item {
+  display: inline-block;
+  margin: 0 10px;
+  color: gray;
   cursor: pointer;
+  height: 100%;
+  line-height: 50px;
+  font-size: 12pt;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.tabs-header-item.active {
+  color: #9B9B9B;
+}
+
+.tabs-header-action {
   display: inline-block;
-  margin: 1em;
+  margin: 5px 10px;
+  color: #9012FE;
+  cursor: pointer;
+  height: 80%;
+  line-height: 40px;
+  font-size: 12pt;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  padding: 0 25px;
+  border-radius: 3px;
 }
 
-.specs {
-  clear: both;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .tabs-header-action:hover {
+    background-color: bleu;
+    color: white;
+  }
+
+
+.tabs-wrapper {
+  padding: 30px;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
+  position: relative;
+  margin-top: 15px;
+}
+  .selected-tab-indicator {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    top: -15px;
+    left: 0;
+    transform: rotate(45deg);
+    background-color: white;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+    display: none;
+  }
+
+.selected-tab-indicator-hider {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-.specs dt {
-  font-weight: bold;
+.tab-content {
+  display: none;
+}
+.tab-content-wrapper {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
 }
 
-.specs > li {
-  display: inline-block;
-  vertical-align: top;
-  width: 200px;
+
+.tab-content.active {
+  display: initial;
+}
+.tab-content-wrapper {
+  visibility: visible;
+  display: initial;
+  opacity: 1;
 }
 
-.specs > li > span {
-  font-size: 1.2em;
-  font-weight: bold;
-}

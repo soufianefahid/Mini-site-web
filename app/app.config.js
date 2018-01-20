@@ -1,14 +1,14 @@
 'use strict';
 
 angular.
-  module('phonecatApp').
+  module('adictiz').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
       $locationProvider.hashPrefix('!');
 
       $routeProvider.
         when('/', {
-          template: '<phone-list></phone-list>'
+          template: '<page-principale></page-principale>'
         }).
         otherwise('/');
     }
