@@ -1,0 +1,58 @@
+<div class="register-template">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form name="form" ng-submit=" $ctrl.register()" role="form">
+        <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+            <label for="firstName">Prénom</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" ng-model=" $ctrl.user.firstName" required />
+            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">Votre prénom est requis</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+            <label for="lastName">Nom</label>
+            <input type="text" name="lastName" id="lastName" class="form-control" ng-model=" $ctrl.user.lastName" required />
+            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Votre nom est requis</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+          <label for="username">Pseudo</label>
+          <input type="text" name="username" id="username" class="form-control" ng-model=" $ctrl.user.username" required />
+          <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Votre pseudo est requis</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" ng-model=" $ctrl.user.email" required />
+          <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">Votre email est requis</span>
+          <span ng-show="form.email.$dirty && form.email.$error.email" class="help-block">Votre email est incorrect</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.birthday.$dirty && form.birthday.$error.required }">
+          <label for="birthday">Date de naissance :</label><br/>
+          <input type="date" name='group' ng-model="$ctrl.user.birthday" required>
+          <span ng-show="form.birthday.$dirty && form.birthday.$error.required" class="help-block">Votre date de naissance est requise</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.sexe.$dirty && form.sexe.$error.required }">
+          <label for="sexe">Sexe</label><br/>
+          <input type="radio" name='group' ng-model="$ctrl.user.sexe" value="woman" required>  Femme <br/>
+          <input type="radio" name='group' ng-model="$ctrl.user.sexe" value="man" required> Homme <br/>
+          <span ng-show="form.sexe.$dirty && form.sexe.$error.required" class="help-block">Votre sexe est requis</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model=" $ctrl.user.password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Votre mot de passe est requis</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.passwordConfirm.$dirty && form.passwordConfirm.$error.required }">
+          <label for="passwordConfirm">Confirmation de mot de passe</label>
+          <input type="password" name="passwordConfirm" id="passwordConfirm" class="form-control" ng-model=" $ctrl.user.passwordConfirm" required />
+          <span ng-show="form.passwordConfirm.$dirty && form.passwordConfirm.$error.required" class="help-block">Le mot de passe n'est pas identique</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.subscribed.$dirty && form.subscribed.$error.required }">
+          <label for="subscribed"></label>
+          <input type="checkbox" ng-model="$ctrl.user.subscribed">S'abonner à notre news letter
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid ||  $ctrl.dataLoading" class="btn btn-primary">Register</button>
+            <img ng-if=" $ctrl.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a href="#!/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>
+</div>

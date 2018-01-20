@@ -1,0 +1,16 @@
+{
+  "name": "adictiz-test",
+  "description": "Mini-site creation",
+  "version": "0.0.0",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.6.x",
+    "angular-animate": "1.6.x",
+    "angular-mocks": "1.6.x",
+    "angular-resource": "1.6.x",
+    "angular-material": "1.1.x",
+    "bootstrap": "3.3.x"
+  }
+}
