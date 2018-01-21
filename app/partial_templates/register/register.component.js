@@ -5,10 +5,13 @@ angular.
   component('register', {
     templateUrl: 'partial_templates/register/register.template.html',
     css: 'partial_templates/register/register.template.css',
-    controller: ['$q', '$timeout', '$filter', 'Notification', '$cookies','$window',
-      function registerController($q, $timeout, $filter, Notification, $cookies, $window){
+    controller: ['$q', '$timeout', '$filter', 'Notification', '$cookies','$window','moment',
+      function registerController($q, $timeout, $filter, Notification, $cookies, $window, moment){
         var self = this;
         self.register = register;
+        self.myDate = new Date();
+        self.minDate = moment(self.myDate).subtract(100, 'years').toDate();
+        self.maxDate = moment(self.myDate).add(5, 'years').toDate();
 
         function register(){
           self.dataLoading = true;

@@ -32,15 +32,21 @@
             </div>
             <div class="form-group input-container" ng-class="{ 'has-error': form.birthday.$dirty && form.birthday.$error.required }">
               <label for="birthday">{{"user.birthday" | translate}}</label>
-              <md-datepicker ng-model="$ctrl.user.birthday" required></md-datepicker>
+              <md-datepicker ng-model="$ctrl.user.birthday" md-min-date="$ctrl.minDate"
+              md-max-date="$ctrl.maxDate" required></md-datepicker>
+              <div class="validation-messages" ng-messages="form.birthday.$error">
+                <div ng-message="required">{{"errors.register.birthday.required" | translate}}</div>
+                <div ng-message="mindate">{{"errors.register.birthday.early" | translate}}</div>
+                <div ng-message="maxdate">{{"errors.register.birthday.late" | translate}}</div>
+              </div>
               <span ng-show="form.birthday.$dirty && form.birthday.$error.required" class="help-block">{{"errors.register.birthday.required" | translate}}</span>
             </div>
             <div class="form-group input-container" ng-class="{ 'has-error': form.sexe.$dirty && form.sexe.$error.required }">
               <label for="sexe">{{"user.sexe" | translate}}</label>
               <div class="input-container">
                 <md-radio-group ng-model="$ctrl.user.sexe" class="md-radio-group">
-                  <md-radio-button value="man" class="md-primary" required>{{"user.woman" | translate}}</md-radio-button>
-                  <md-radio-button value="woman" class="md-primary md-special" required>{{"user.man" | translate}}</md-radio-button>
+                  <md-radio-button value="woman" class="md-primary" required>{{"user.woman" | translate}}</md-radio-button>
+                  <md-radio-button value="man" class="md-primary md-special" required>{{"user.man" | translate}}</md-radio-button>
                 </md-radio-group>
               </div>
               <span ng-show="form.sexe.$dirty && form.sexe.$error.required" class="help-block">{{"errors.register.sexe.required" | translate}}</span>
@@ -61,7 +67,7 @@
               </md-checkbox>
             </div>
             <div class="btn-container">
-              <button type="submit" ng-disabled="form.$invalid ||  $ctrl.dataLoading" class="the-button">{{"register.submit" | translate}}</button>
+              <button type="submit" ng-disabled="$ctrl.dataLoading" class="the-button">{{"register.submit" | translate}}</button>
               <fa name="spinner" ng-if=" $ctrl.dataLoading" spin></fa>
             </div>
           </form>
