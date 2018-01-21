@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+          Sort by:
+          <select ng-model="$ctrl.orderProp">
+            <option value="name">Alphabetical</option>
+            <option value="age">Newest</option>
+          </select>
+        </p>
+
+      <section class="choices">
+        <div class="categories">
+          <select ng-model="$ctrl.selectedCategory" >
+            <option ng-repeat="category in $ctrl.categories" value="{{category}}">{{category}}</option>
+          </select>
+        </div>
+
+      </section>
+
+    </div>
+    <div class="col-md-10">
+      <ul class="items">
+        <li ng-repeat="item in $ctrl.items | filter:$ctrl.query " ng-show="$ctrl.selectedCategory ? item.category == $ctrl.selectedCategory : true" class="thumbnail" >
+          <div class="thumb">
+            <img ng-src="{{item.imgUrl}}" alt="{{item.name}}" />
+          </a>
+          <a >{{item.name}}</a>
+          <a >{{item.tage}}</a>
+          <a >{{item.category}}</a>
+          <p>{{item.snippet}}</p>
+        </li>
+      </ul>
+
+      <!--<div ng-show="!filter.length">No Item available</div> -->
+
+    </div>
+  </div>
+</div>

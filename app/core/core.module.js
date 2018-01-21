@@ -1,4 +1,4 @@
 'use strict';
 
 // Define the `core` module
-angular.module('core', ['core.phone', 'core.cookies-services']);
+angular.module('core', ['core.item', 'core.cookies-services']);

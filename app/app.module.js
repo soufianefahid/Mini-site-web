@@ -12,18 +12,17 @@ var adictiz = angular.module('adictiz', [
   'appHeader',
   'aboutMe',
   'register',
-  'phoneDetail',
-  'phoneList',
+  'itemList',
 
   'pagePrincipale'
 ]).constant('LOCALES', {
   'locales': {
-      'fr_FR': 'Français',
+      'fr': 'Français',
       'en_US': 'English'
   }
 })
 
-adictiz.run(function($translate,cookiesServices) {
+adictiz.run(function($translate, cookiesServices, $window) {
   var lang = cookiesServices.getLang();
   if (lang == "")
     lang = $window.navigator.language || $window.navigator.userLanguage;

@@ -1,0 +1,58 @@
+[
+  {
+      "tag": "dangeureux",
+      "category": "Aves",
+      "id": "aigle-royal-aves",
+      "imgUrl": "img/items/aigle-royal-aves.jpg",
+      "name": "Aigle Royal",
+      "snippet": "L’aigle royal est sédentaire.\nIl est exclusivement montagnard en France.\nIl va se reproduire dans les falaises ou les arbres. La hauteur du site varie entre 200m et plusieurs centaines de mètres.\nIl se nourrit principalement de mammifères de taille moyenne. On estime sa population en 390 et 450 couples."
+  },
+  {
+      "tag": "inoffensif",
+      "id": "chat mammifere",
+      "category": "Mammifere",
+      "imgUrl": "img/items/chat-mammifere.jpg",
+      "name": "Chat",
+      "snippet": " est la sous-espèce issue de la domestication du chat sauvage, mammifère carnivore de la famille des félidés.\nIl est l’un des principaux animaux de compagnie et compte aujourd’hui une cinquantaine de races différentes reconnues par les instances de certification."
+  },
+  {
+      "tag": "inoffensif",
+      "category": "Mammifere",
+      "id": "chien-mammifere",
+      "imgUrl": "img/items/chien-mammifere.jpg",
+      "name": "Chien",
+      "snippet": "est la sous-espèce domestique de Canis lupus, un mammifère de la famille des Canidés (Canidae), laquelle comprend également le loup gris et le dingo, chien domestique redevenu sauvage.\nLe chien est la première espèce animale à avoir été domestiquée par l'Homme pour l'usage de la chasse dans une société humaine paléolithique qui ne maitrise alors ni l'agriculture ni l'élevage."
+  },
+  {
+      "tag": "inoffensif",
+      "category": "Aves",
+      "id": "oiseau-aves",
+      "imgUrl": "img/items/oiseau-aves.jpg",
+      "name": "Oiseau",
+      "snippet": "Les oiseaux, qui forment la classe des Aves, sont des vertébrés tétrapodes ailés. S'il existe en 2016 plus de 10 400 espèces d'oiseaux recensées1 (dont plus de la moitié sont des passereaux)a, très différentes tant par leur écologie que par leurs comportements, chacune d'elles présente un ensemble commun de caractéristiques évidentes permettant de les regrouper, en particulier des écailles cornées et des plumes, une mâchoire sans dents enveloppée d'un étui corné formant un bec, une queue osseuse courte, des membres antérieurs transformés en ailes (fonctionnelles ou non, cette caractéristique étant particulièrement rare chez les vertébrésb) et des membres postérieurs qui servent seuls normalement à la progression sur le sol ou dans l'eau."
+  },
+  {
+      "tag": "dangeureux",
+      "category": "Mammifere",
+      "id": "ours-polaire-mammifere",
+      "imgUrl": "img/items/Ours-polaire-mammifere.jpg",
+      "name": "Ours polaire",
+      "snippet": "L'ours blanc (Ursus maritimus), aussi connu sous le nom d'ours polaire, est un grand mammifère omnivore (à prédominance carnivore) originaire des régions arctiques. C'est, avec l'ours kodiak et l'éléphant de mer, l'un des plus grands carnivores terrestres et il figure au sommet de sa pyramide alimentaire.\nParfaitement adapté à son habitat, l'ours blanc possède une épaisse couche de graisse ainsi qu'une fourrure qui l'isolent du froid"
+  },
+  {
+      "tag": "inoffensif",
+      "category": "Poisson",
+      "id": "poisson",
+      "imgUrl": "img/items/poisson.jpg",
+      "name": "Poisson",
+      "snippet": "Les poissons sont des animaux vertébrés aquatiques à branchies, pourvus de nageoires et dont le corps est le plus souvent couvert d'écailles. On les trouve abondamment aussi bien dans les eaux douces que dans les mers : on trouve des espèces depuis les sources de montagnes (omble de fontaine, goujon) jusqu'au plus profond des océans (grandgousier, poisson-ogre). Leur répartition est toutefois très inégale : 50 % des poissons vivraient dans 17 % de la surface des océans1 (qui sont souvent aussi les plus surexploités)."
+  },
+  {
+      "tag": "dangeureux",
+      "category": "Poisson",
+      "id": "requin",
+      "imgUrl": "img/items/requin.jpg",
+      "name": "Requin",
+      "snippet": "Les requins, squales ou sélachimorphes forment un super-ordre de poissons cartilagineux, possédant cinq à sept fentes branchiales sur les côtés de la tête et les nageoires pectorales qui ne sont pas fusionnés à la tête. Ils sont présents dans tous les océans du globe et dans certains grands fleuves. Les requins modernes sont classés au sein du clade Selachimorpha ou Selachii et constituent le groupe-frère des raies. Toutefois, le terme « requin », au sens large, désigne aussi les espèces disparues de la sous-classe des élasmobranches, comme Cladoselache et Xenacanthus."
+  }
+]
