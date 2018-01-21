@@ -5,6 +5,7 @@ angular.
   module('itemList').
   component('itemList', {
     templateUrl: 'partial_templates/item-list/item-list.template.html',
+    css: 'partial_templates/item-list/item-list.template.css',
     controller: ['Item','cookiesServices','$scope','$mdDialog','$http',
       function itemListController(Item, cookiesServices, $scope, $mdDialog, $http) {
         self = this;

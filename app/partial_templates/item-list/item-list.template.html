@@ -1,47 +1,39 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
-
+    <div class="col-sm-3 slider-container">
       <p>
-        Search:
-        <input ng-model="$ctrl.query" />
+        <md-input-container class="md-block" flex-gt-sm>
+          <label>{{"item.list.search" | translate}}</label>
+          <input ng-model="$ctrl.query">
+        </md-input-container>
       </p>
-
-      <p>
-          Sort by:
-          <select ng-model="$ctrl.orderProp">
-            <option value="name">Alphabetical</option>
-            <option value="age">Newest</option>
-          </select>
-        </p>
-
-      <section class="choices">
-        <div class="categories">
-          <select ng-model="$ctrl.selectedCategory" >
-            <option ng-repeat="category in $ctrl.categories" value="{{category}}">{{category}}</option>
-          </select>
-        </div>
-
-      </section>
-
+      <div layout="row">
+        <md-input-container class="full-width">
+          <label class="label-area">{{"item.list.category" | translate}}</label>
+          <md-select ng-model="$ctrl.selectedCategory">
+            <md-optgroup label="categories">
+              <md-option ng-value="category" ng-repeat="category in $ctrl.categories"> {{category}}</md-option>
+            </md-optgroup>
+          </md-select>
+        </md-input-container>
+      </div>
     </div>
-    <div class="col-md-10">
-      <ul class="items">
-        <li ng-repeat="item in $ctrl.items | filter:$ctrl.query " ng-show="$ctrl.selectedCategory ? item.category == $ctrl.selectedCategory : true" class="thumbnail" >
-          <div class="thumb">
-            <img ng-src="{{item.imgUrl}}" alt="{{item.name}}" />
-          </a>
-          <a ><md-button class="md-primary md-raised" ng-click="$ctrl.showAdvanced($event, item)">{{item.name}}</md-button></a>
-          <a >{{item.tage}}</a>
-          <a >{{item.category}}</a>
-          <p>{{item.snippet}}</p>
-        </li>
-      </ul>-->
 
-
-      <!--<div ng-show="!filter.length">No Item available</div> -->
-
+    <div class="col-sm-8 margin-container">
+      <div ng-repeat="item in $ctrl.items | filter:$ctrl.query " ng-show="$ctrl.selectedCategory ? item.category == $ctrl.selectedCategory : true">
+          <div class="col-sm-12 col-md-12">
+            <div class="thumbnail height-container">
+              <img ng-src="{{item.imgUrl}}" alt="{{item.name}}" />
+              <div class="caption">
+                <h3>{{item.name}}</h3>
+                <p>{{item.category}}</p>
+                <p>{{item.snippet}}</p>
+                <p><md-button class="md-primary md-raised" ng-click="$ctrl.showAdvanced($event, item)">{{item.name}}</md-button></p>
+              </div>
+            </div>
+          </div>
+      </div>
     </div>
+
   </div>
 </div>

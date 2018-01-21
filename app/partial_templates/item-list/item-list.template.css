@@ -1,0 +1,13 @@
+.height-container{
+  min-height: 740px;
+}
+.margin-container{
+  margin-left: 8% !important;
+  display: inline-block;
+}
+.slider-container{
+  display: inline-block;
+}
+.full-width{
+  width: 100%;
+}
