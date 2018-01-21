@@ -1,5 +1,14 @@
 body {
-  padding: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+.help-block{
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: red;
+  font-size: 17px;
+  margin-left: 38%;
 }
 
 h1 {
@@ -17,7 +26,13 @@ h1 {
   padding-top: 15px;
 }
 .app-tabs-container {
-  padding: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+.page-principale-template{
+  background-color: white;
 }
 .tabs-header-container {
   height: 50px;
@@ -57,10 +72,10 @@ h1 {
   border-radius: 3px;
 }
 
-  .tabs-header-action:hover {
-    background-color: bleu;
-    color: white;
-  }
+.tabs-header-action:hover {
+  background-color: bleu;
+  color: white;
+}
 
 
 .tabs-wrapper {
@@ -69,19 +84,19 @@ h1 {
   position: relative;
   margin-top: 15px;
 }
-  .selected-tab-indicator {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    top: -15px;
-    left: 0;
-    transform: rotate(45deg);
-    background-color: white;
-    z-index: 1;
-    transition: 0.5s ease-in-out;
-    display: none;
-  }
+.selected-tab-indicator {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  top: -15px;
+  left: 0;
+  transform: rotate(45deg);
+  background-color: white;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+  display: none;
+}
 
 .selected-tab-indicator-hider {
   position: absolute;
@@ -112,3 +127,154 @@ h1 {
   opacity: 1;
 }
 
+.template-header {
+  display: table;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+.header-container {
+  display: table-row;
+  width: 100%;
+  height: 100%;
+}
+.header-btn {
+  display: inline-block;
+  font-family: "app-font-bold";
+  font-size: 16px;
+  margin: 10px;
+  color: #AEBAC4;
+  cursor: pointer;
+}
+
+.header-btn:hover {
+  color: #9B9B9B;
+;
+}
+
+.title-area {
+  display: table-cell;
+  width: 40%;
+  height: 100%;
+  position: relative;
+  vertical-align: middle;
+}
+
+.title-container {
+  display: inline-block;
+  margin-left: 100px;
+  font-size: 25px;
+}
+.outer{
+  width: 100%;
+}
+.inner{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.buttons-area {
+  display: table-cell;
+  width: 60%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 30px;
+}
+.page-content {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+.title-container{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 45px;
+}
+.form-container{
+  width: 70%;
+  margin: 0 auto;
+}
+.input-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 120px;
+  display: inline;
+}
+.checkbox-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 120px;
+  margin-left: 2%;
+}
+.md-special{
+  margin-left: 19%;
+}
+.subscribe-area{
+  font-size: 17px;
+  margin-left: 2%;
+}
+.md-radio-group {
+  display: inline-flex;
+}
+label{
+  display: inline-flex;
+  min-width: 35%;
+  margin-left: 2.5%;
+  font-size: 13pt;
+}
+
+eld-container {
+  display: inline-block;
+}
+.input-field {
+  min-width: 314px;
+  min-height: 60px;
+  padding: 0 20px;
+  border: 2px solid #ebeaea;
+  color: #9B9B9B;
+  font-size: 16pt;
+  width: 50% !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.textarea-field {
+  min-width: 314px;
+  min-height: 107px;
+  padding: 0 20px;
+  border: 2px solid #ebeaea;
+  color: #9B9B9B;
+  font-size: 16pt;
+  width: 100%;
+  resize: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.btn-container{
+  width: 40%;
+  height: 50px;
+  margin-left: 30%;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 19pt;
+  background-color: #0596de;
+  color: white;
+  font-family: "app-font-bold";
+  border-radius: 3px;
+}
+.the-button{
+  width: 100%;
+  height: 100%;
+  /* vertical-align: middle; */
+  text-align: center;
+  font-size: 19pt;
+  background-color: #0596de;
+  color: white;
+  font-family: "app-font-bold";
+  border-radius: 3px;
+  border: none;
+  /* margin: 0 auto; */
+}

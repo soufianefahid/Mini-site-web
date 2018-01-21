@@ -4,10 +4,11 @@ angular.
   module('register').
   component('register', {
     templateUrl: 'partial_templates/register/register.template.html',
-    controller: ['$q', '$timeout', '$filter', 'Notification', '$cookies',
-      function registerController($q, $timeout, $filter, Notification, $cookies){
+    controller: ['$q', '$timeout', '$filter', 'Notification', '$cookies','$window',
+      function registerController($q, $timeout, $filter, Notification, $cookies, $window){
         var self = this;
         self.register = register;
+
         function register(){
           self.dataLoading = true;
           create(self.user)

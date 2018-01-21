@@ -18,6 +18,7 @@
     "register.subscribe":"Subscribe to our news letter",
     "register.submit":"Create an account",
     "register.cancel":"Cancel",
+    "register.title":"Create Your account",
     "user.woman":"Woman",
     "user.man":"Man",
     "errors.register.firstName.required" : "Your first name is required",

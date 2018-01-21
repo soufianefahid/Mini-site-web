@@ -1,58 +1,74 @@
 <div class="register-template">
-  <div class="col-md-6 col-md-offset-3">
-    <h2>Register</h2>
-    <form name="form" ng-submit=" $ctrl.register()" role="form">
-        <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
-            <label for="firstName">{{"user.firstName" | translate}}</label>
-            <input type="text" name="firstName" id="firstName" class="form-control" ng-model=" $ctrl.user.firstName" required />
-            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">{{"errors.register.firstName.required" | translate}}</span>
+  <div class="page-content">
+    <div class="outer">
+      <div class="inner">
+        <div class="title-container">{{"register.title" | translate}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <div class="">
+          <form name="form" ng-submit=" $ctrl.register()" role="form" class="form-inline" >
+            <div class="form-group input-container input-container" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+              <label for="firstName">{{"user.firstName" | translate}}</label>
+              <input type="text" name="firstName" id="firstName" class="form-control input-field" ng-model=" $ctrl.user.firstName" required />
+              <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">{{"errors.register.firstName.required" | translate}}</span>
+            </div>
+            <div class="form-group input-container" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+              <label for="lastName">{{"user.lastName" | translate}}</label>
+              <input type="text" name="lastName" id="lastName" class="form-control input-field" ng-model=" $ctrl.user.lastName" required />
+              <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">{{"errors.register.lastName.required" | translate}}</span>
+            </div>
+            <div class="form-group input-container" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <label for="username">{{"user.userName" | translate}}</label>
+            <input type="text" name="username" id="username" class="form-control input-field" ng-model=" $ctrl.user.username" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">{{"errors.register.userName.required" | translate}}</span>
+            </div>
+            <div class="form-group input-container" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+              <label for="email">{{"user.email" | translate}}</label>
+              <input type="email" name="email" id="email" class="form-control input-field" ng-model=" $ctrl.user.email" required />
+              <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">{{"errors.register.email.required" | translate}}</span>
+              <span ng-show="form.email.$dirty && form.email.$error.email" class="help-block">{{"errors.register.email.emailFormatError" | translate}}</span>
+            </div>
+            <div class="form-group input-container" ng-class="{ 'has-error': form.birthday.$dirty && form.birthday.$error.required }">
+              <label for="birthday">{{"user.birthday" | translate}}</label>
+              <md-datepicker ng-model="$ctrl.user.birthday" md-placeholder="Enter date" required></md-datepicker>
+              <span ng-show="form.birthday.$dirty && form.birthday.$error.required" class="help-block">{{"errors.register.birthday.required" | translate}}</span>
+            </div>
+            <div class="form-group input-container" ng-class="{ 'has-error': form.sexe.$dirty && form.sexe.$error.required }">
+              <label for="sexe">{{"user.sexe" | translate}}</label>
+              <div class="input-container">
+                <md-radio-group ng-model="$ctrl.user.sexe" class="md-radio-group">
+                  <md-radio-button value="man" class="md-primary" required>{{"user.woman" | translate}}</md-radio-button>
+                  <md-radio-button value="woman" class="md-primary md-special" required>{{"user.man" | translate}}</md-radio-button>
+                </md-radio-group>
+              </div>
+              <span ng-show="form.sexe.$dirty && form.sexe.$error.required" class="help-block">{{"errors.register.sexe.required" | translate}}</span>
+            </div>
+            <div class="form-group input-container" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+              <label for="password">{{"user.password" | translate}}</label>
+              <input type="password" name="password" id="password" class="form-control input-field" ng-model=" $ctrl.user.password" required />
+              <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">{{"errors.register.password.required" | translate}}</span>
+            </div>
+            <div class="form-group input-container" ng-class="{ 'has-error': form.passwordConfirm.$dirty && form.passwordConfirm.$error.required }">
+              <label for="passwordConfirm">{{"user.passwordConfirmation" | translate}}</label>
+              <input type="password" class="form-control input-field" name="passwordConfirm" id="passwordConfirm" compare-to="$ctrl.user.password" class="form-control" ng-model=" $ctrl.user.passwordConfirm" required />
+              <span ng-show="form.passwordConfirm.$dirty && form.passwordConfirm.$error.required" class="help-block">{{"errors.register.passwordConfirmation.required" | translate}}</span>
+            </div>
+            <div class="form-group checkbox-container" ng-class="{ 'has-error': form.subscribed.$dirty && form.subscribed.$error.required }">
+              <md-checkbox aria-label="checkbox" class="subscribe-area"ng-model="$ctrl.user.subscribed">
+                {{"register.subscribe" | translate}}
+              </md-checkbox>
+            </div>
+            <div class="btn-container">
+              <button type="submit" ng-disabled="form.$invalid ||  $ctrl.dataLoading" class="the-button">{{"register.submit" | translate}}</button>
+              <fa name="spinner" ng-if=" $ctrl.dataLoading" spin></fa>
+            </div>
+          </form>
         </div>
-        <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
-            <label for="lastName">{{"user.lastName" | translate}}</label>
-            <input type="text" name="lastName" id="lastName" class="form-control" ng-model=" $ctrl.user.lastName" required />
-            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">{{"errors.register.lastName.required" | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
-          <label for="username">{{"user.userName" | translate}}</label>
-          <input type="text" name="username" id="username" class="form-control" ng-model=" $ctrl.user.username" required />
-          <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">{{"errors.register.userName.required" | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
-          <label for="email">{{"user.email" | translate}}</label>
-          <input type="email" name="email" id="email" class="form-control" ng-model=" $ctrl.user.email" required />
-          <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">{{"errors.register.email.required" | translate}}</span>
-          <span ng-show="form.email.$dirty && form.email.$error.email" class="help-block">{{"errors.register.email.emailFormatError" | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.birthday.$dirty && form.birthday.$error.required }">
-          <label for="birthday">{{"user.birthday" | translate}}</label><br/>
-          <input type="date" name='group' ng-model="$ctrl.user.birthday" required>
-          <span ng-show="form.birthday.$dirty && form.birthday.$error.required" class="help-block">{{"errors.register.birthday.required" | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.sexe.$dirty && form.sexe.$error.required }">
-          <label for="sexe">{{"user.sexe" | translate}}</label><br/>
-          <input type="radio" name='group' ng-model="$ctrl.user.sexe" value="woman" required>  {{"user.woman" | translate}} <br/>
-          <input type="radio" name='group' ng-model="$ctrl.user.sexe" value="man" required> {{"user.man" | translate}} <br/>
-          <span ng-show="form.sexe.$dirty && form.sexe.$error.required" class="help-block">{{"errors.register.sexe.required" | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
-            <label for="password">{{"user.password" | translate}}</label>
-            <input type="password" name="password" id="password" class="form-control" ng-model=" $ctrl.user.password" required />
-            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">{{"errors.register.password.required" | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.passwordConfirm.$dirty && form.passwordConfirm.$error.required }">
-          <label for="passwordConfirm">{{"user.passwordConfirmation" | translate}}</label>
-          <input type="password" name="passwordConfirm" id="passwordConfirm" compare-to="$ctrl.user.password" class="form-control" ng-model=" $ctrl.user.passwordConfirm" required />
-          <span ng-show="form.passwordConfirm.$dirty && form.passwordConfirm.$error.required" class="help-block">{{"errors.register.passwordConfirmation.required" | translate}}</span>
-        </div>
-        <div class="form-group" ng-class="{ 'has-error': form.subscribed.$dirty && form.subscribed.$error.required }">
-          <label for="subscribed"></label>
-          <input type="checkbox" ng-model="$ctrl.user.subscribed">{{"register.subscribe" | translate}}
-        </div>
-        <div class="form-actions">
-            <button type="submit" ng-disabled="form.$invalid ||  $ctrl.dataLoading" class="btn btn-primary">{{"register.submit" | translate}}</button>
-            <fa name="spinner" ng-if=" $ctrl.dataLoading" spin></fa>
-            <a href="#!/login" class="btn btn-link">{{"register.cancel" | translate}}</a>
-        </div>
-    </form>
-</div>
+      </div>
+    </div>
+
+  </div>
+
 </div>

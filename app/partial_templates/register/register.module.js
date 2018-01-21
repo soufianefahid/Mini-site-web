@@ -1,7 +1,7 @@
 'use strict';
 
 // Define the `phoneDetail` module
-angular.module('register', ['ui-notification', 'ngCookies','picardy.fontawesome']).
+angular.module('register', ['ui-notification', 'ngCookies','picardy.fontawesome', 'ngMaterial']).
   config(function(NotificationProvider) {
     NotificationProvider.setOptions({
       delay: 10000,
