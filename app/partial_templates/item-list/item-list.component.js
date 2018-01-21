@@ -24,7 +24,7 @@ angular.
           $mdDialog.show({
             locals:{item: item},
             controller: Dialog,
-            templateUrl: 'partial_templates/item-list/dialog1.tmpl.html',
+            templateUrl: 'partial_templates/layouts/item-detail.template.html',
             parent: angular.element(document.body),
             targetEvent: ev,
             clickOutsideToClose:true,
