@@ -5,16 +5,20 @@ angular.
   module('appHeader').
   component('appHeader', {
     templateUrl: 'partial_templates/app-header/app-header.template.html',
-    controller: ['$window','cookiesServices',
-      function appHeaderController($window, cookiesServices){
-        // Première récupération du cookies si ça n'existe pas alors le navigateur
-        var lang = cookiesServices.getLang();
-        if (lang == "")
-          lang = $window.navigator.language || $window.navigator.userLanguage;
-          // premièrement il faut mettre à jour les cookies pour qu'il souvegarde la langue
-          cookiesServices.setLang(lang)
+    controller: ['$window','cookiesServices','$translate','LOCALES',
+      function appHeaderController($window, cookiesServices, $translate, LOCALES){
+        // Première récupération du cookies si ça n'existe pas alors le navigateu
+        self = this;
+        this.localesObj = LOCALES.locales;
         //récupération de la langue
+        this.switchLang= function(selectedLang){
+          var lang = getKeyByValue(this.localesObj, selectedLang);
+          $translate.ChangeLanguage(lang);
+        };
 
+        function getKeyByValue(object, value) {
+          return Object.keys(object).find(key => object[key] === value);
+        }
 
 
       }

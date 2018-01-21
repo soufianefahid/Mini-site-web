@@ -1,0 +1,33 @@
+{
+  "locale": "en_US",
+  "name":"English",
+  "words": {
+    "page.principale.about-me" : "About me",
+    "page.principale.register" : "Create an account",
+    "page.principale.search" : "Search Page",
+    "app.header.Language": "Language",
+    "app.header.companyName": "Adictiz",
+    "user.firstName":"First name",
+    "user.lastName":"Last name",
+    "user.email":"Email",
+    "user.userName":"User name",
+    "user.birthday":"Birthday",
+    "user.sexe":"Gender",
+    "user.password":"Password",
+    "user.passwordConfirmation":"Password confirmation",
+    "register.subscribe":"Subscribe to our news letter",
+    "register.submit":"Create an account",
+    "register.cancel":"Cancel",
+    "user.woman":"Woman",
+    "user.man":"Man",
+    "errors.register.firstName.required" : "Your first name is required",
+    "errors.register.lastName.required" : "Your last name is required",
+    "errors.register.email.required" : "Your email is required",
+    "errors.register.email.emailFormatError" : "Your email is not correct",
+    "errors.register.userName.required" : "Your user name is required",
+    "errors.register.birthday.required" : "Your birhtday is requirede",
+    "errors.register.sexe.required" : "Your gender is required",
+    "errors.register.password.required" : "Your password is required",
+    "errors.register.passwordConfirmation.required" : "Confirm your password"
+  }
+}

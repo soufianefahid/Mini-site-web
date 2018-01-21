@@ -6,19 +6,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand">Adictiz</a>
+      <a class="navbar-brand">{{"app.header.companyName" | translate}} </a>
     </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Langue <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{"app.header.Language" | translate}} <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a>Français</a></li>
-            <li><a>Anglais</a></li>
+            <li ng-repeat= "locale in $ctrl.localesObj" ng-click="$ctrl.switchLang(locale)"><a>{{locale}}</a></li>
           </ul>
         </li>
       </ul>
     </div>
   </div>
+
 </nav>

@@ -1,0 +1,33 @@
+{
+  "locale": "fr_FR",
+  "name":"Français",
+  "words": {
+    "page.principale.about-me" : "À propos de moi",
+    "page.principale.register" : "Créer un compte",
+    "page.principale.search" : "Page de recherche",
+    "app.header.Language": "Langue",
+    "app.header.companyName": "Adictiz",
+    "user.firstName":"Prénom",
+    "user.lastName":"Nom",
+    "user.email":"Email",
+    "user.userName":"Pseudo",
+    "user.birthday":"Date de naissance",
+    "user.sexe":"Sexe",
+    "user.password":"Mot de passe",
+    "user.passwordConfirmation":"Confirmation de mot de passe",
+    "register.subscribe":"S'abonner à notre news letter",
+    "register.submit":"Créer un compte",
+    "register.cancel":"Annuler",
+    "user.woman":"Femme",
+    "user.man":"homme",
+    "errors.register.firstName.required" : "Votre prénom est requis",
+    "errors.register.lastName.required" : "Votre nom est requis",
+    "errors.register.email.required" : "Votre email est requis",
+    "errors.register.email.emailFormatError" : "Votre email n'est pas correct",
+    "errors.register.userName.required" : "Votre pseudo est requis",
+    "errors.register.birthday.required" : "Votre date de naissance est requise",
+    "errors.register.sexe.required" : "Votre sexe est requis",
+    "errors.register.password.required" : "Votre mot de passe est requis",
+    "errors.register.passwordConfirmation.required" : "Resaisissez votre mot de passe"
+  }
+}

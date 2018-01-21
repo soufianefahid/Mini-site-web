@@ -1,11 +1,10 @@
 <div ng-show="$ctrl.loadData">
-  firstName : {{$ctrl.user.firstName}} <br/>
-  lastName : {{$ctrl.user.lastName}} <br/>
-  email : {{$ctrl.user.email}} <br/>
-  pseudo : {{$ctrl.user.userName}} <br/>
-  birthday : {{$ctrl.user.birthday}} <br/>
-  sexe : {{$ctrl.user.sexe}} <br/>
-  password : {{$ctrl.user.password}} <br/>
+    {{"user.firstName" | translate}} : {{$ctrl.user.firstName}} <br/>
+    {{"user.lastName" | translate}} : {{$ctrl.user.lastName}} <br/>
+    {{"user.email" | translate}} : {{$ctrl.user.email}} <br/>
+    {{"user.userName" | translate}} : {{$ctrl.user.username}} <br/>
+    {{"user.birthday" | translate}} : {{$ctrl.user.birthday}} <br/>
+    {{"user.sexe" | translate}} : {{$ctrl.user.sexe}} <br/>
 </div>
 <div ng-show="!$ctrl.loadData">
   No data available

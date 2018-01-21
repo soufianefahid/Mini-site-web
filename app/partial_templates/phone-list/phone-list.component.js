@@ -9,10 +9,14 @@ angular.
       function PhoneListController(Phone, $mdDialog, $scope, uiDialog) {
         self = this;
         this.phones = Phone.query();
+        this.selectedCategory = null;
         this.orderProp = 'age';
         $scope.showAdvanced = function($event) {
           uiDialog.showAlert($event);
         };
+        this.categories = [
+          "nature", "exposition", "art"
+        ];
       }
     ]
   });

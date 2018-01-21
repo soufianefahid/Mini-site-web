@@ -9,8 +9,8 @@ angular.module('pagePrincipale', ['ui-notification']).
       startRight: 10,
       verticalSpacing: 50,
       horizontalSpacing: 50,
-      positionX: 'right',
-      positionY: 'top'
+      positionX: 'left',
+      positionY: 'bottom'
   });
 }).directive('appTabs', ['$rootScope', function($rootScope) {
 

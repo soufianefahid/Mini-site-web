@@ -11,6 +11,12 @@
     "angular-mocks": "1.6.x",
     "angular-resource": "1.6.x",
     "angular-material": "1.1.x",
-    "bootstrap": "3.3.x"
+    "bootstrap": "3.3.x",
+    "angular-translate": "^2.17.0",
+    "angular-translate-loader-static-files": "^2.17.0",
+    "angular-translate-storage-local": "^2.17.0",
+    "angular-translate-handler-log": "^2.17.0",
+    "angular-dynamic-locale": "^0.1.32",
+    "angular-i18n": "^1.6.8"
   }
 }
