@@ -5,8 +5,8 @@ angular.
   module('itemList').
   component('itemList', {
     templateUrl: 'partial_templates/item-list/item-list.template.html',
-    controller: ['Item','$http','$scope','uiDialog',
-      function itemListController(Item, $http, $scope, uiDialog) {
+    controller: ['Item','$http','$scope','$mdDialog',
+      function itemListController(Item, $http, $scope, $mdDialog) {
         self = this;
         this.items = [];
         this.categories = []
@@ -20,10 +20,22 @@ angular.
           }
         });
         this.selectedCategory = null;
-        this.orderProp = 'tag';
-        $scope.showAdvanced = function($event) {
-          uiDialog.showAlert($event);
+        this.showAdvanced = function(ev, item) {
+          $mdDialog.show({
+            locals:{item: item},
+            controller: Dialog,
+            templateUrl: 'partial_templates/item-list/dialog1.tmpl.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true,
+          })
         };
+        function Dialog($scope, $mdDialog, item) {
+          $scope.item = item;
+          $scope.hide = function() {
+            $mdDialog.hide();
+          };
+        }
 
       }
     ]
