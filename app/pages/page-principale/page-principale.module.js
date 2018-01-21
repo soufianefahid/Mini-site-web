@@ -24,7 +24,7 @@ angular.module('pagePrincipale', ['ui-notification']).
         element.find(".tab-content").removeClass("active");
 
         element.find(".tab-content").each( function() {
-          var tabID = $(this).attr("data-id");
+          var tabID = $( this ).attr("data-id");
           if( tabID != activeTabID ) return;
           $( this ).addClass("active");
         } );
@@ -35,7 +35,7 @@ angular.module('pagePrincipale', ['ui-notification']).
         if (first)
           var indicatorLeft = activeHeader[0].offsetLeft + activeHeader.width() / 2 - $indicator.width() / 2 - 100;
         else
-          var indicatorLeft = activeHeader[0].offsetLeft + activeHeader.width() / 2 - $indicator.width() / 2 ;
+          var indicatorLeft = activeHeader[0].offsetLeft + activeHeader.width() / 2 - $indicator.width() / 2;
         $indicator.css("transform", "translate("+indicatorLeft+"px, 0) rotate(45deg)");
       };
 
@@ -45,16 +45,16 @@ angular.module('pagePrincipale', ['ui-notification']).
       element.find(".selected-tab-indicator").show();
 
       element.find(".tabs-header-item").on("click", function() {
-        var element = $( this );
-        if( element.hasClass("active") ) return;
+        var $this = $(this);
+        if( $this.hasClass("active") ) return;
 
         element.find(".tabs-header-item").removeClass("active");
-        element.addClass("active");
+        $this.addClass("active");
 
-        updateTabs( element );
-        moveIndicator( element , false );
+        updateTabs( $this );
+        moveIndicator( $this, false );
 
-        var tabID = element.attr("data-id");
+        var tabID = $this.attr("data-id");
 
         // Added to fix an issue with angular-ellipsis > not working with show / hide
         $rootScope.$broadcast("dibari:refresh-ellipsis", null);
