@@ -32,7 +32,7 @@
             </div>
             <div class="form-group input-container" ng-class="{ 'has-error': form.birthday.$dirty && form.birthday.$error.required }">
               <label for="birthday">{{"user.birthday" | translate}}</label>
-              <md-datepicker ng-model="$ctrl.user.birthday" md-placeholder="Enter date" required></md-datepicker>
+              <md-datepicker ng-model="$ctrl.user.birthday" required></md-datepicker>
               <span ng-show="form.birthday.$dirty && form.birthday.$error.required" class="help-block">{{"errors.register.birthday.required" | translate}}</span>
             </div>
             <div class="form-group input-container" ng-class="{ 'has-error': form.sexe.$dirty && form.sexe.$error.required }">

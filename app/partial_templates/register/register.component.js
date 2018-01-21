@@ -4,6 +4,7 @@ angular.
   module('register').
   component('register', {
     templateUrl: 'partial_templates/register/register.template.html',
+    css: 'partial_templates/register/register.template.css',
     controller: ['$q', '$timeout', '$filter', 'Notification', '$cookies','$window',
       function registerController($q, $timeout, $filter, Notification, $cookies, $window){
         var self = this;
