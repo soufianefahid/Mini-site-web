@@ -5,21 +5,25 @@ angular.
   module('itemList').
   component('itemList', {
     templateUrl: 'partial_templates/item-list/item-list.template.html',
-    controller: ['Item','$http','$scope','$mdDialog',
-      function itemListController(Item, $http, $scope, $mdDialog) {
+    controller: ['Item','cookiesServices','$scope','$mdDialog','$http',
+      function itemListController(Item, cookiesServices, $scope, $mdDialog, $http) {
         self = this;
         this.items = [];
-        this.categories = []
-        var query = Item.query();
-        query.$promise.then(function(data) {
-          self.items = data;
-          for (var i=0; i< data.length; i++){
+        this.categories = [];
+
+        //Getting Data Language
+        var lang = cookiesServices.getLang();
+        var response =$http.get('data/items/items.'+lang+'.json').then(function(response) {
+          self.items = response.data;
+          for (var i=0; i< self.items.length; i++){
             if (self.categories.indexOf(self.items[i].category) == -1) {
               self.categories.push(self.items[i].category);
             }
           }
         });
+
         this.selectedCategory = null;
+
         this.showAdvanced = function(ev, item) {
           $mdDialog.show({
             locals:{item: item},
@@ -30,6 +34,7 @@ angular.
             clickOutsideToClose:true,
           })
         };
+
         function Dialog($scope, $mdDialog, item) {
           $scope.item = item;
           $scope.hide = function() {

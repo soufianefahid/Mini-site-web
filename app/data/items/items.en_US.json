@@ -1,0 +1,58 @@
+[
+  {
+      "tag": "dangerous",
+      "category": "Aves",
+      "id": "aigle-royal-aves",
+      "imgUrl": "img/items/aigle-royal-aves.jpg",
+      "name": "Golden Eagle",
+      "snippet": "The golden eagle (Aquila chrysaetos) is one of the best-known birds of prey in the Northern Hemisphere. It is the most widely distributed species of eagle. Like all eagles, it belongs to the family Accipitridae. These birds are dark brown, with lighter golden-brown plumage on their napes. Immature eagles of this species typically have white on the tail and often have white markings on the wings. Golden eagles use their agility and speed combined with powerful feet and massive, sharp talons to snatch up a variety of prey (mainly hares, rabbits, marmots and other ground squirrels)."
+  },
+  {
+      "tag": "harmless",
+      "category": "Mammal",
+      "id": "chat mammifere",
+      "imgUrl": "img/items/chat-mammifere.jpg",
+      "name": "Cat",
+      "snippet": "The domestic cat (Felis silvestris catus or Felis catus) is a small, typically furry, carnivorous mammal. They are often called house cats when kept as indoor pets or simply cats when there is no need to distinguish them from other felids and felines. They are often valued by humans for companionship and for their ability to hunt vermin. There are more than seventy cat breeds recognized by various cat registries."
+  },
+  {
+      "tag": "harmless",
+      "category": "Mammal",
+      "id": "chien-mammifere",
+      "imgUrl": "img/items/chien-mammifere.jpg",
+      "name": "Dog",
+      "snippet": "The domestic dog (Canis lupus familiaris or Canis familiaris) is a member of the genus Canis (canines), which forms part of the wolf-like canids, and is the most widely abundant terrestrial carnivore. The dog and the extant gray wolf are sister taxa as modern wolves are not closely related to the wolves that were first domesticated, which implies that the direct ancestor of the dog is extinct. "
+  },
+  {
+      "tag": "harmless",
+      "category": "Aves",
+      "id": "oiseau-aves",
+      "imgUrl": "img/items/oiseau-aves.jpg",
+      "name": "Bird",
+      "snippet": "Birds (Aves) are a group of endothermic vertebrates, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5 cm (2 in) bee hummingbird to the 2.75 m (9 ft) ostrich. They rank as the class of tetrapods with the most living species, at approximately ten thousand, with more than half of these being passerines, sometimes known as perching birds."
+  },
+  {
+      "tag": "dangerous",
+      "category": "Mammal",
+      "id": "ours-polaire-mammifere",
+      "imgUrl": "img/items/Ours-polaire-mammifere.jpg",
+      "name": "White Bear",
+      "snippet": "The polar bear (Ursus maritimus) is a carnivorous bear whose native range lies largely within the Arctic Circle, encompassing the Arctic Ocean, its surrounding seas and surrounding land masses. It is a large bear, approximately the same size as the omnivorous Kodiak bear (Ursus arctos middendorffi)"
+  },
+  {
+      "tag": "harmless",
+      "category": "Fish",
+      "id": "poisson",
+      "imgUrl": "img/items/poisson.jpg",
+      "name": "Fish",
+      "snippet": "Fish are the gill-bearing aquatic craniate animals that lack limbs with digits. They form a sister group to the tunicates, together forming the olfactores. Included in this definition are the living hagfish, lampreys, and cartilaginous and bony fish as well as various extinct related groups. Tetrapods emerged within lobe-finned fishes, so cladistically they are fish as well. However, traditionally fish are rendered paraphyletic by excluding the tetrapods (i.e., the amphibians, reptiles, birds and mammals which all descended from within the same ancestry). Because in this manner the term fish is defined negatively as a paraphyletic group, it is not considered a formal taxonomic grouping in systematic biology. The traditional term pisces (also ichthyes) is considered a typological, but not a phylogenetic classification."
+  },
+  {
+      "tag": "dangerous",
+      "category": "Fish",
+      "id": "requin",
+      "imgUrl": "img/items/requin.jpg",
+      "name": "Shark",
+      "snippet": "Sharks are a group of elasmobranch fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head. Modern sharks are classified within the clade Selachimorpha (or Selachii) and are the sister group to the rays. However, the term shark has also been used for extinct members of the subclass Elasmobranchii outside the Selachimorpha, such as Cladoselache and Xenacanthus, as well as other Chondrichthyes such as the holocephalid eugenedontidans."
+  }
+]
