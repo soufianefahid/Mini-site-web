@@ -3,6 +3,7 @@
 angular.
   module('aboutMe').
   component('aboutMe', {
+    css: 'partial_templates/about-me/about-me.template.css',
     templateUrl: 'partial_templates/about-me/about-me.template.html',
     controller: ['$cookies',
       function aboutMeController($cookies){

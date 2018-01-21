@@ -1,0 +1,55 @@
+.img-container {
+  background-image: url(img_profile.png);
+  width: 181px;
+  height: 181px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.carte{
+  position: absolute;
+  left: 250px;
+  top: 50px;
+}
+.no-data{
+  font-size: 18px;
+  text-align: center;
+  margin-top: -5%;
+}
+.personnal-image{
+  margin-top: -6%;
+}
+.user-first-name{
+  font-family: "app-font-bold";
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.user-table-column{
+  margin-bottom: 20px;
+  font-family: "app-font-regular";
+  font-size: 16px;
+  font-weight: 400;
+}
+.about-me-section{
+  padding-left: 83px;
+  margin-top: 70px;
+}
+.sub-title{
+  font-family: "app-font-bold";
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.label-user{
+  color: grey;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  width: 110px;
+}
+.content-user{
+  display: inline-block;
+}

@@ -29,6 +29,7 @@
     "errors.register.birthday.required" : "Your birhtday is requirede",
     "errors.register.sexe.required" : "Your gender is required",
     "errors.register.password.required" : "Your password is required",
-    "errors.register.passwordConfirmation.required" : "Confirm your password"
+    "errors.register.passwordConfirmation.required" : "Confirm your password",
+    "about.me.no-data": "No available user please Try to Sign up"
   }
 }

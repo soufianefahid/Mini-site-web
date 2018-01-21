@@ -1,4 +1,4 @@
 'use strict';
 
 // Define the `phoneDetail` module
-angular.module('aboutMe', ['ngCookies'])
+angular.module('aboutMe', ['ngCookies', 'angularCSS'])

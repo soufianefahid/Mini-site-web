@@ -1,11 +1,36 @@
+
+   <br/>
+   <br/>
+
+  <br/>
+
+   <br/>
+</div>
+<div ng-show="!$ctrl.loadData" class="no-data">
+    {{"about.me.no-data" | translate}}
+</div>
 <div ng-show="$ctrl.loadData">
-    {{"user.firstName" | translate}} : {{$ctrl.user.firstName}} <br/>
-    {{"user.lastName" | translate}} : {{$ctrl.user.lastName}} <br/>
-    {{"user.email" | translate}} : {{$ctrl.user.email}} <br/>
-    {{"user.userName" | translate}} : {{$ctrl.user.username}} <br/>
-    {{"user.birthday" | translate}} : {{$ctrl.user.birthday}} <br/>
-    {{"user.sexe" | translate}} : {{$ctrl.user.sexe}} <br/>
-</div>
-<div ng-show="!$ctrl.loadData">
-  No data available
-</div>
+  <div class="personnal-image">
+      <div class="img-container"></div>
+  </div>
+  <div class="carte">
+    <div class="user-first-name">{{$ctrl.user.firstName}}</div>
+    <div class="company-table-column-grey">{{$ctrl.user.lastName}}</div>
+    <div class="company-table-column">{{$ctrl.user.birthday| date:'yyyy/MM/dd'}}</div>
+  </div>
+  <div class="about-me-section">
+    <div class="sub-title">{{"page.principale.about-me" | translate}}</div>
+    <div class="user-table-column">
+      <div class="label-user">{{"user.userName" | translate}}  </div>
+      <div class="content-user">{{$ctrl.user.username}}</div>
+    </div>
+    <div class="user-table-column">
+        <div class="label-user">{{"user.email" | translate}}  </div>
+        <div class="content-user">{{$ctrl.user.email}}</div>
+    </div>
+    <div class="user-table-column">
+        <div class="label-user">{{"user.sexe" | translate}} </div>
+        <div class="content-user">{{$ctrl.user.sexe}}</div>
+    </div>
+  </div>
+</div
