@@ -55,3 +55,6 @@
   et data depuis data/items
 
   partial_template/layouts: Contient le layout pour le pop-up du module item-list
+
+
+  To Start the server use : "npm start"
