@@ -26,7 +26,6 @@ angular.
         }
         $rootScope.$watch(function() { return $cookies.get('users'); }, function(newValue) {
           self.user = GetLastUser();
-          self.loadData = true;
         });
            
       }
