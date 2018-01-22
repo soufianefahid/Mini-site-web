@@ -23,6 +23,8 @@ var adictiz = angular.module('adictiz', [
 })
 
 adictiz.run(function($translate, cookiesServices, $window) {
+  //Premièrement on cherche la langue sur les cookies si cette information n'existe pas
+  // On cherche la langue du navigateur et on la stoque sur les cookies
   var lang = cookiesServices.getLang();
   if (lang == "")
     lang = $window.navigator.language || $window.navigator.userLanguage;

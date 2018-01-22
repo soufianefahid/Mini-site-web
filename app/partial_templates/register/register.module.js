@@ -1,6 +1,6 @@
 'use strict';
 
-// Define the `phoneDetail` module
+// Define the `register` module
 angular.module('register', ['ui-notification', 'ngCookies','picardy.fontawesome', 'ngMaterial', 'angularMoment','ngMessages']).
   config(function(NotificationProvider) {
     NotificationProvider.setOptions({
@@ -12,7 +12,9 @@ angular.module('register', ['ui-notification', 'ngCookies','picardy.fontawesome'
       positionX: 'right',
       positionY: 'top'
   });
-})
+})// Cette directive a été déclaré ici pour avoir un niveau maximal de scalabilité
+//Si on cherche a utiliser ce module dans une autre application alors on aura pas a redéfinir
+//La directive
 .directive("compareTo", function() {
   return {
     require: "ngModel",

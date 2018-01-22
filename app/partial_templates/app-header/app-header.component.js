@@ -15,7 +15,7 @@ angular.
           var lang = getKeyByValue(this.localesObj, selectedLang);
           cookiesServices.setLang(lang);
         };
-
+        //Evitez les duplicates
         function getKeyByValue(object, value) {
           return Object.keys(object).find(key => object[key] === value);
         }

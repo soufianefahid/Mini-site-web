@@ -21,6 +21,7 @@
     "register.title":"Create Your account",
     "user.woman":"Woman",
     "user.man":"Man",
+    "user.abbone-ou-pas": "Subscribed",
     "errors.register.firstName.required" : "Your first name is required",
     "errors.register.lastName.required" : "Your last name is required",
     "errors.register.email.required" : "Your email is required",

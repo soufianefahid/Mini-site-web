@@ -1,5 +1,5 @@
 'use strict';
 
-// Define the `phoneDetail` module
+// Define the `application header` module
 angular.module('appHeader', ['core.cookies-services'
 , 'ngMaterial'])

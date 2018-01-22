@@ -12,12 +12,13 @@ angular.
         this.items = [];
         this.categories = [];
 
-        //Getting Data Language
+        //Cherchez la langue sur les cookies
         var lang = cookiesServices.getLang();
+        //Cherchez les items
         getItems(lang);
 
         this.selectedCategory = null;
-
+        // Pop-up manager
         this.showAdvanced = function(ev, item) {
           $mdDialog.show({
             locals:{item: item},
@@ -38,13 +39,14 @@ angular.
             }
           });
         }
-
+        //Popup - controller
         function Dialog($scope, $mdDialog, item) {
           $scope.item = item;
           $scope.hide = function() {
             $mdDialog.hide();
           };
         }
+        //Recharge data si on change la langue grâce a changeLanguage de ngTranslate
         $rootScope.$watch(function() { return cookiesServices.getLang(); }, function(newValue) {
           getItems(cookiesServices.getLang());
           console.log("language = "+cookiesServices.getLang());

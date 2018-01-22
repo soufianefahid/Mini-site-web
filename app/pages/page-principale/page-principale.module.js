@@ -1,6 +1,6 @@
 'use strict';
 
-// Define the `phoneDetail` module
+// Define the `Page principale` module
 angular.module('pagePrincipale', ['ui-notification']).
   config(function(NotificationProvider) {
     NotificationProvider.setOptions({
@@ -12,7 +12,10 @@ angular.module('pagePrincipale', ['ui-notification']).
       positionX: 'left',
       positionY: 'bottom'
   });
-}).directive('appTabs', ['$rootScope', function($rootScope) {
+})// Cette directive a été déclaré ici pour avoir un niveau maximal de scalabilité
+// Si cette directive est utilisée par plusieurs composants on peut créer un fichier
+// app.directive.js et inscrire notre directive avec le main module de l'application
+.directive('appTabs', ['$rootScope', function($rootScope) {
 
     var link = function(scope, element, attrs) {
 
@@ -56,7 +59,6 @@ angular.module('pagePrincipale', ['ui-notification']).
 
         var tabID = $this.attr("data-id");
 
-        // Added to fix an issue with angular-ellipsis > not working with show / hide
         $rootScope.$broadcast("dibari:refresh-ellipsis", null);
         $rootScope.$broadcast("app:tab-change", { tabID : tabID });
       });

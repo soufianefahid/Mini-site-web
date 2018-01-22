@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="app.css" />
-
+    <!-- Load Angular dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -32,7 +32,7 @@
     <script src="bower_components/ng-translate/ng-translate.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/angular-moment/angular-moment.js"></script>
-
+    <!-- Load Angular Files -->
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
     <script src="app.directive.js"></script>
@@ -47,13 +47,13 @@
     <script src="partial_templates/app-header/app-header.component.js"></script>
     <script src="partial_templates/about-me/about-me.module.js"></script>
     <script src="partial_templates/about-me/about-me.component.js"></script>
-
     <script src="pages/page-principale/page-principale.module.js"></script>
     <script src="pages/page-principale/page-principale.component.js"></script>
   </head>
   <body>
-
+    <!-- Application header -->
     <app-header></app-header>
+    <!-- Application principal page -->
     <div ng-view></div>
 
   </body>
