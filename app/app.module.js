@@ -32,7 +32,8 @@ adictiz.run(function($translate, cookiesServices, $window) {
   $translate.Config({
     default :lang,
     languages :[
-      'en_US'
+      'en_US',
+      'fr'
     ]
   });
 });

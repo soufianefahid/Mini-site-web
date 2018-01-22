@@ -13,7 +13,7 @@ angular.
         //récupération de la langue
         this.switchLang= function(selectedLang){
           var lang = getKeyByValue(this.localesObj, selectedLang);
-          $translate.ChangeLanguage(lang);
+          cookiesServices.setLang(lang);
         };
 
         function getKeyByValue(object, value) {
