@@ -30,6 +30,8 @@
     "errors.register.sexe.required" : "Your gender is required",
     "errors.register.password.required" : "Your password is required",
     "errors.register.passwordConfirmation.required" : "Confirm your password",
+    "errors.register.normal.minlength": "At leat you should have 4 caracters",
+    "errors.register.password.minlength": "At leat you should have 8 caracters",
     "about.me.no-data": "No available user please Try to Sign up",
     "item.list.search": "Search",
     "item.list.category": "Category"

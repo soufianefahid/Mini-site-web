@@ -32,6 +32,8 @@
     "errors.register.passwordConfirmation.required" : "Resaisissez votre mot de passe",
     "errors.register.birthday.early" : "Date très récente",
     "errors.register.birthday.late" : "date très loin",
+    "errors.register.normal.minlength": "Veuillez entrer 4 caractères ou plus",
+    "errors.register.password.minlength": "Veuillez entrer 8 caractères ou plus",
     "about.me.no-data": "Aucun utilisateur inscris veuillez vous inscrire",
     "item.list.search": "Rechercher",
     "item.list.category": "Catégorie"

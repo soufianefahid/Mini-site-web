@@ -1,4 +1,4 @@
 'use strict';
 
 // Define the `phoneList` module
-angular.module(['itemList'], ['core.item', 'core.ui-dialog', 'core.cookies-services','angularCSS']);
+angular.module(['itemList'], ['core.cookies-services','angularCSS']);
