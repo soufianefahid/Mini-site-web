@@ -18,8 +18,7 @@ angular.
           create(self.user)
             .then(function (response) {
               if (response.success){
-                debugger;
-                Notification.success('Votre Enregistrement a été effectué avec succés'+' Merci de nous rejoindre '+response.user.username )
+                Notification.success('Votre Enregistrement a été effectué avec succés' + ' Merci de nous rejoindre '+response.user.username )
                 self.dataLoading = false;
               }else{
                 Notification.error('L\'émail que vous utilisez existe déjà ')

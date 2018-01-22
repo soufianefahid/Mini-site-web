@@ -1,15 +1,16 @@
 Ceci est un projet réalisé avec angularJS.
 C'est un mini site contenant:
 
-  Header: ----> Component : (partial_template/app-header)
-    Sélecteur de langue pour l'interface
-    Chargement des langues via un fichier json
-    Récupération de la langue via un cookie ou la langue du navigateur
-    Changement en live de la langue (utilisation ngTranslate)
+  Header: ----> Component  (partial_template/app-header)
 
-  Barre de navigation contenant 3 onglets: ----> Component : (pages/page-principale)
+      Sélecteur de langue pour l'interface
+      Chargement des langues via un fichier json
+      Récupération de la langue via un cookie ou la langue du navigateur
+      Changement en live de la langue (utilisation ngTranslate)
 
-    Page principal (About me).(partial_template/about-me)
+  Barre de navigation contenant 3 onglets: ----> Component (pages/page-principale)
+
+    Page principal (About me):  ----> Component (partial_template/about-me)
 
     Page formulaire: ----> Component : (partial_template/register)
 
