@@ -10,8 +10,17 @@ angular.
         var self = this;
         self.register = register;
         self.myDate = new Date();
-        self.minDate = moment(self.myDate).subtract(100, 'years').toDate();
-        self.maxDate = moment(self.myDate).add(5, 'years').toDate();
+        this.minDate = new Date(
+          this.myDate.getFullYear()-80,
+          this.myDate.getMonth() ,
+          this.myDate.getDate()
+        );
+
+        this.maxDate = new Date(
+          this.myDate.getFullYear(),
+          this.myDate.getMonth(),
+          this.myDate.getDate()
+        );
 
         function register(){
           self.dataLoading = true;
@@ -21,7 +30,7 @@ angular.
                 Notification.success('Votre Enregistrement a été effectué avec succés' + ' Merci de nous rejoindre '+response.user.username )
                 self.dataLoading = false;
               }else{
-                Notification.error('L\'émail que vous utilisez existe déjà ')
+                Notification.error(response.message)
                 self.dataLoading = false;
               }
             });
@@ -30,13 +39,15 @@ angular.
         }
         function create(user) {
           var deferred = $q.defer();
-
+          if (user.birthday == undefined || user.birthday == null) deferred.resolve({ success: false, message: 'Entez votre date de naissance' });
+          if (user.sexe == undefined || user.sexe == null) deferred.resolve({ success: false, message: 'Entez votre sexe' });
+          if (user.password != user.passwordConfirm) deferred.resolve({ success: false, message: 'Confirmez votre mot de passe' });
           // simulate api call with $timeout
           $timeout(function () {
             GetByUsername(user.email)
               .then(function (duplicateUser) {
                 if (duplicateUser !== null) {
-                  deferred.resolve({ success: false, message: 'Email "' + user.email + '" is already taken' });
+                  deferred.resolve({ success: false, message: 'L\'email que vous utilisez existe déjà' });
                 } else {
                   var users = getUsers();
 

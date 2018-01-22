@@ -34,20 +34,33 @@
               <span ng-show="form.email.$dirty && form.email.$error.email" class="help-block">{{"errors.register.email.emailFormatError" | translate}}</span>
             </div>
             <div class="form-group input-container" ng-class="{ 'has-error': form.birthday.$dirty && form.birthday.$error.required }">
-              <label for="birthday">{{"user.birthday" | translate}}</label>
-              <md-datepicker ng-model="$ctrl.user.birthday" md-min-date="$ctrl.minDate"
-              md-max-date="$ctrl.maxDate" required></md-datepicker>
-              <span ng-show="form.birthday.$dirty && form.birthday.$error.required" class="help-block">{{"errors.register.birthday.required" | translate}}</span>
+              <label for= "birthday">{{"user.birthday" | translate}}</label>
+              <md-input-container>
+                <label for= "birthday">{{"user.birthday" | translate}}</label>
+                <md-datepicker ng-model="$ctrl.user.birthday" md-min-date="$ctrl.minDate"
+              md-max-date="$ctrl.maxDate" ng-required="true"></md-datepicker>
+                <div ng-messages="form.birthday.$error">
+                  <div ng-message="required">{{"errors.register.birthday.required" | translate}}</div>
+                  <div ng-message="mindate">{{"errors.register.birthday.early" | translate}}</div>
+                  <div ng-message="maxdate">{{"errors.register.birthday.late" | translate}}</div>
+                </div>
+              </md-input-container>
+              <span ng-show="form.birthday.$dirty && form.birthday.$error.required" class="help-block"></span>
             </div>
             <div class="form-group input-container" ng-class="{ 'has-error': form.sexe.$dirty && form.sexe.$error.required }">
               <label for="sexe">{{"user.sexe" | translate}}</label>
               <div class="input-container">
-                <md-radio-group ng-model="$ctrl.user.sexe" class="md-radio-group" ng-required="true">
-                  <md-radio-button value="woman" class="md-primary" >{{"user.woman" | translate}}</md-radio-button>
-                  <md-radio-button value="man" class="md-primary md-special" >{{"user.man" | translate}}</md-radio-button>
-                </md-radio-group>
+                <md-input-container>
+                  <md-radio-group name="sexe" ng-model="$ctrl.user.sexe" class="md-radio-group" ng-required="true">
+                    <md-radio-button value="woman"  class="md-primary" >{{"user.woman" | translate}}</md-radio-button>
+                    <md-radio-button value="man"  class="md-primary md-special" >{{"user.man" | translate}}</md-radio-button>
+                  </md-radio-group>
+                  <div ng-messages="form.sexe.$error">
+                      <div ng-message="required">{{"errors.register.sexe.required" | translate}}</div>
+                  </div>
+                </md-input-container>
               </div>
-              <span ng-show="form.sexe.$dirty && form.sexe.$error.required" class="help-block">{{"errors.register.sexe.required" | translate}}</span>
+              <span ng-show="form.sexe.$dirty && form.sexe.$error.required" class="help-block"></span>
             </div>
             <div class="form-group input-container" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
               <label for="password">{{"user.password" | translate}}</label>
