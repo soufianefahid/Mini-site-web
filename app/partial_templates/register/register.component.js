@@ -30,7 +30,7 @@ angular.
             .then(function (response) {
               if (response.success){
                 //Notification display
-                Notification.success('Votre Enregistrement a été effectué avec succés' + ' Merci de nous rejoindre '+response.user.username )
+                Notification.success('Votre Enregistrement a été effectué avec succés' )
                 self.dataLoading = false;
               }else{
                 //Notification display

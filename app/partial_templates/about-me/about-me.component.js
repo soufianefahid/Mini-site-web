@@ -5,8 +5,8 @@ angular.
   component('aboutMe', {
     css: 'partial_templates/about-me/about-me.template.css',
     templateUrl: 'partial_templates/about-me/about-me.template.html',
-    controller: ['$cookies',
-      function aboutMeController($cookies){
+    controller: ['$cookies','$rootScope',
+      function aboutMeController($cookies, $rootScope){
         var self = this;
         self.user = GetLastUser();
 
@@ -24,6 +24,10 @@ angular.
           else self.loadData = false;
           return lastUser
         }
+        $rootScope.$watch(function() { return $cookies.get('users'); }, function(newValue) {
+          self.user = GetLastUser();
+          self.loadData = true;
+        });
            
       }
     ]
